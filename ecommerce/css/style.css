@@ -1,0 +1,145 @@
+/* Estilos generales */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+    background-color: #ebebeb;
+}
+
+/* Estilos de la cabecera */
+header {
+	background-color: #fff;
+	color: #193452;
+	padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+h1{
+    letter-spacing: 10px;
+    margin-left: 100px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav ul li {
+	display: inline-block;
+	margin-right: 20px;
+}
+nav ul li a {
+	color: #193452;
+	text-decoration: none;
+}
+
+.logo{
+    width: 10%;
+}
+
+/* Estilos del banner */
+.banner {
+	background-image: url('../multimedia/banner3.png');
+	
+    background-position: center;
+	color: #fff;
+	padding: 200px 0;
+	text-align: center;
+}
+.banner h2 {
+    color: #fff;
+	font-size: 48px;
+	margin: 0;
+}
+.banner p {
+	font-size: 24px;
+	margin: 20px 0 0 0;
+}
+
+h2{
+    text-align: center;
+    font-size: 38px;
+    color: #193452;
+}
+
+
+/* Estilos de los productos */
+.productos {
+	margin: 50px 0;
+	padding: 0 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  
+}
+.producto {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 20%;
+    height: 400px;
+    box-shadow: 5px 5px 5px 5px #0505052d;
+    padding: 10px;
+    border-radius: 3%;
+    margin: 15px 0;
+}
+
+.producto:hover{
+    border: 2px solid  #193452;
+}
+
+.producto img {
+	display: block;
+
+    width: 100%;
+    height:160px;
+}
+.producto h3 {
+	font-size: 24px;
+	margin: 20px 0 10px 0;
+}
+.producto p {
+	font-size: 16px;
+	margin: 0;
+}
+
+.btn{
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 3%;
+    cursor: pointer;
+    color: #9f2930;
+    font-size: 15px;
+    border: none;
+}
+
+.btn:hover{
+   border: 2px solid  #193452;
+}
+
+footer{
+    width: 100%;
+    background-color: #fff;
+	color: #193452;
+	padding: 10px;
+    text-align: center;
+}
+
+/* products.html */
+
+.formSearch{
+    width: 100%;
+    height: 50px;
+}
+
+.formSearch > input {
+    display: block;
+    width: 80%;
+    margin: auto;
+    border: #193452;
+    border-radius: 3%;
+    padding: 12px;
+}

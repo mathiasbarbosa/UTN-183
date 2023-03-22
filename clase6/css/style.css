@@ -1,0 +1,100 @@
+*{
+    /* background-color: lightblue; */
+    /* color: lightcoral; */
+    /* background-image: url('http://placekitten.com/300/300');
+    background-repeat: no-repeat;
+    background-size: cover; */
+
+    margin: 0;
+    padding: 0;
+}
+
+/* p{
+    font-size: 40px;
+    color: lightgreen ;
+}
+
+div{
+    border: 1px solid red;
+    background-color:lightgray ;
+}
+
+div p{
+    color: aqua;
+}
+
+#tituloPrincipal{
+    font-family: 'Times New Roman', Times, serif;
+    color: blue;
+
+}
+#parrafoDiferente{
+    color: red;
+}
+
+.parrafos{
+    text-decoration: underline;
+    color: black;
+}
+
+/* div > .parrafos {
+
+} */
+
+/* [name]{
+    height: 50px;
+    background-color: aqua;
+}
+
+[name=nombre]{
+    width: 150px;
+    border: none;
+    background-color: red;
+}
+
+.navlist > li:first-child{
+    color: limegreen;
+    list-style: none;
+}
+
+#tituloPrincipal::after{
+    content: ' con Mathias';
+}
+
+#tituloPrincipal::before{
+    content: ' curso de desarrollo web ';
+} */ 
+
+
+
+ul{
+    border: 1px solid red;
+    /* width: 500px; */
+    width: 50%;
+    /* margin-left: 15px; */
+    /* margin: 20px 30px 5px 10px; */
+    margin: 50px auto;
+    position: relative;
+    z-index: 1;
+}
+
+ul > li {
+    display: inline-block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* #containerImg{
+    width: 100%;
+    height: 500px;
+    border: 1px solid red;
+    position: relative;
+} */
+
+
+img{
+    position: absolute;
+    left: 50%;
+    bottom: 300px;
+    /* top: 50%; */
+}

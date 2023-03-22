@@ -1,0 +1,23 @@
+.parrafos{
+    color: tomato;
+}
+
+#tituloPrincipal{
+    color: violet;
+    font-size: 60px;
+    
+}
+
+h2{
+    color: orange;
+}
+
+.tituloh2{
+    font-size: 50px;
+    text-decoration: line-through;
+    color: blue;
+}
+
+.tituloh2:hover{
+    color:blueviolet
+}

@@ -1,0 +1,75 @@
+:root{
+    --color-principal: hsl(26, 100%, 55%);
+    --color-secundario: hsl(25, 100%, 94%);
+}
+
+
+#containerInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -140px;
+}
+
+
+.containerData{
+   
+    height: 30%;
+    margin-bottom: 30px ;
+    
+}
+
+.containerData > h4{
+    color: var(--color-principal);
+    margin-bottom: 20px;
+}
+
+.containerData > h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.containerData > p{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+.containerPrice{
+    margin-bottom: 30px;
+}
+
+.containerPrice > div > strong{
+    font-size: 2rem;
+    margin-right: 15px;
+}
+.containerPrice > div > span{
+    font-size: 1rem;
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+}
+
+.containerPrice > div{
+    display: flex;
+    align-items: center;
+}
+
+.containerPrice > div + span{
+    font-size: 1rem;
+    text-decoration: line-through;
+}
+
+.containerCant{
+    background-color: rgba(211, 211, 211, 0.24);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.containerCant + button{
+    background-color: var(--color-principal);
+    color: #fff;
+    padding: 10px;
+}

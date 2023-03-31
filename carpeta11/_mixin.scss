@@ -1,0 +1,16 @@
+@import 'variables';
+
+@mixin parrafoEstilos(){
+    font-size: 20px;
+    color: $colorTexto;
+}
+
+
+@mixin form-container($ancho: 500px){
+    width: $ancho;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 8px;
+}

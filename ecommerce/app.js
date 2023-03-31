@@ -69,7 +69,7 @@ function addToCart(boton){
     console.log(id);
     id = id.slice(9)
     console.log(id);
-    let busqueda =  productosInformaticos.find( (elemento) =>  { return elemento.id == id})
+    let busqueda =  productosInformaticos.find( elemento =>  elemento.id == id )
     console.log(busqueda);
     arrayCarrito.push(busqueda)
     console.log(arrayCarrito);

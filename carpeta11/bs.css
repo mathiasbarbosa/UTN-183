@@ -1,0 +1,26 @@
+@media (min-width:320px) and (max-width: 767px){
+    .marginCard{
+        margin: 15px 0;
+    }
+}
+
+
+.clase1{
+    color: green;
+}
+
+.clase2{
+    color: red;
+}
+
+.clase3{
+    color: yellow !important;
+}
+
+.clase4{
+    color: blue !important;
+}
+
+/* .clase5{
+    color:aqua !important
+} */

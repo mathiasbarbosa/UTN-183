@@ -1,0 +1,57 @@
+body{
+    background-color: lightgreen;
+}
+
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+main > div {
+    width: 300px;
+    background-color: lightyellow;
+    display: flex;
+    justify-content: center;
+}
+
+
+#img2{
+    display: none;
+}
+
+@media (min-width: 600px){
+    body{
+        background-color: lightblue;
+    }
+}
+
+@media(max-width: 500px){
+    body{
+        background-color: tomato;
+    }
+    h1{
+        color: #fff;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width:770px){
+    main{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    main > div {
+        margin: 15px 0;
+    }
+
+    #img{
+        display: none;
+    }
+    #img2{
+        display: block;
+    }
+}

@@ -1,0 +1,35 @@
+@import 'mixin'; 
+
+
+
+form{
+   @include form-container($ancho: 500px);
+
+    input{
+        padding: 8px;
+        background: none;
+        outline: none;
+        border: none;
+        border-top: 1px solid $colorSecundario;
+        color: $colorTexto;
+    };
+
+    button{
+        padding: 8px;
+        background: none;
+        border: 1px solid $colorSecundario;
+        box-shadow: 5px 5px 5px #222322a6;
+        color: $colorTexto;
+        &:hover{
+            background-color: $colorSecundario;
+        }
+    }
+
+    p{
+       @include parrafoEstilos();
+       a{
+        text-decoration: none;
+        color:  $colorSecundario;
+       }
+    }
+}

@@ -2,7 +2,7 @@ import { User } from "../models/user.class.js"
 
 
 const form = document.querySelector('#registerForm')
-const usersArray = [];
+
 
 
 const postUser = async (user) => {
@@ -28,6 +28,8 @@ const postUser = async (user) => {
 
 
 form.addEventListener('submit', (e) => {
+    const usersArray = JSON.parse( localStorage.getItem('users') )  ||  []
+    console.log(usersArray);
     e.preventDefault()
     let formData = new FormData(form)
     let username = formData.get('username')
@@ -39,9 +41,10 @@ form.addEventListener('submit', (e) => {
         console.log(user);
         usersArray.push(user)
         localStorage.setItem('users', JSON.stringify( usersArray) )
-        // window.location = '../index.html'
+     
         console.log(JSON.stringify(user));
         postUser(user)
+        window.location = '../login.html'
     }else{
         alert('Dale, ingresa bien los datos')
     }

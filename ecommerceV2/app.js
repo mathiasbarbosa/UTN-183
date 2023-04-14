@@ -1,7 +1,38 @@
 
-const arrayCarrito = []
+
 
 const containerProducts = document.querySelector('#containerProducts')
+let products = [];
+
+const getAllProducts = async () => {
+
+  try {
+      
+    let response =  await fetch('./products.json')
+    console.log(response);
+    console.log(response.status);
+    console.log(response.ok);
+    if (response.status !== 200 ) {
+      throw new Error(response.status)
+    }
+ 
+    return response.json()
+
+  } catch (error) {
+    Swal.fire({
+      title: 'Error!',
+      text: `Error en la solicitud: ${error}`,
+      icon: 'error',
+      confirmButtonText: 'Cool'
+    })
+  }
+
+
+}
+
+
+getAllProducts()
+  .then((response) => products = response)
 
 
 function htmlCards(arrayProductos){
@@ -31,65 +62,55 @@ function htmlCards(arrayProductos){
                                   <a href="#">Ver más</a>
                            
                             `
-
-      // html += `                         <div class= 'producto'>
-                                     
-      //                                   <img src=${elemento.imagen} alt="producto">
-      //                                   <h3>${elemento.nombre}</h3>
-      //                                   <p>${elemento.descripcion}</p>
-      //                                   <p>${elemento.precio}</p>
-      //                                   <a href="#">Ver más</a>
-      //                                   <button class="btn">Añadir al carrito</button>
-      //                             </div>
-      // `
-    
       divProduct.append(boton)
-     fragment.append(divProduct)
+      fragment.append(divProduct)
       addToCart(boton)
       
     })
 
-    // return fragment
-    // containerProducts.innerHTML = html
     containerProducts.append(fragment)
 
 }
 
 
 function addToCart(boton){
-
   boton.addEventListener('click', function(evento){
-    // console.log(evento);
-    // console.dir(evento.target);
-    // console.dir(evento.target.parentNode);
-    // console.dir(evento.target.parentNode.children[1].innerText);
-    // alert('Producto agregado al carrito')
-
+    let arrayCarrito =  JSON.parse(localStorage.getItem('carrito')) || []
     let id = evento.target.id
     console.log(id);
     id = id.slice(9)
     console.log(id);
-    let busqueda =  productosInformaticos.find( elemento =>  elemento.id == id )
-    console.log(busqueda);
-    arrayCarrito.push(busqueda)
-    console.log(arrayCarrito);
+    let busqueda =  products.find( elemento =>  elemento.id == id )
+    if (busqueda !== undefined) {
+
+      let findIndex =  arrayCarrito.findIndex( item => item.id == busqueda.id)
+      if (findIndex !== -1) {
+        arrayCarrito[findIndex].cantidad += 1
+        localStorage.setItem('carrito', JSON.stringify( arrayCarrito ))
+      }else{
+        busqueda.cantidad = 1
+        arrayCarrito.push(busqueda)
+        localStorage.setItem('carrito', JSON.stringify( arrayCarrito ))
+      }
+     
+    }
+   
   })
 }
 
 
 
-// for (let i = 0; i < productosInformaticos.length; i++) {
-  
-//   if (productosInformaticos[i].destacado == true) {
-//     htmlCards()
-//   }
-  
-// }
+document.addEventListener('DOMContentLoaded', async () => {
+  let products = await getAllProducts()
+  console.log(products);
+  let productosDestacados = products.filter( (elemento) => elemento.destacado === true)
+  htmlCards(productosDestacados)
+})
 
 
-let productosDestacados = productosInformaticos.filter( (elemento) => elemento.destacado === true)
 
-htmlCards(productosDestacados)
+
+
 
 
 // let productos =  htmlCards(productosDestacados)

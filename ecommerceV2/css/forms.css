@@ -37,6 +37,12 @@ body {
   background-color: #193452;
 }
 
+#titleLogin{
+  text-align: center;
+  font-size: 60px;
+  color: #9f2930;
+}
+
 main {
   width: 100%;
   height: 80vh;
